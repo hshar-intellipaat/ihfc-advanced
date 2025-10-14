@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    position: fixed;
+    top:0;
+    padding: 20px;
+    background-color: rgb(172, 233, 18);
+    width: 100%;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+} 
+
+.main{
+    position: absolute;
+    top: 60px;
+    overflow-x:scroll;
+    bottom: 70px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    padding: 20px;
+    background-color: rgb(172, 233, 18);
+    width: 100%;
+    
+}
+
+ .ftext {
+    width: 100%;
+    text-align: center;
+}
+
+ .htext {
+    width: 100%;
+    text-align: center;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    background-color: azure;
+    margin: 10px;
+}
+
+.hero p {
+    margin: 20px;
+    
+}
+
+h1{
+    text-align: center;
+    margin: 20px;
+}
+
+h2{
+    text-align: center;
+    margin: 20px;
+}
+
+ul, ol {
+  padding-left: 40px;  
+  list-style-position: inside;
+
+}
+
+ul li {
+    text-align: center;
+    margin: 10px;
+}
+
+ol li {
+    text-align: center;
+    margin: 10px;
+}
+
+.box {
+    width: 60%;
+    height: auto;
+    background-color: pink;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    padding: 20px;
+    
+}
+
+.box input {
+    padding: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input{
+    margin: 10px;
+}
