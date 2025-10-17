@@ -1,29 +1,21 @@
 
 const btn = document.querySelector(".btn");
-async function getData(prompt){
-const reponose = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+
+async function getData(userprompt){
+const reponose = await fetch('http://127.0.0.1:3000/', {
   method: 'POST',
   headers: {
-    Authorization: 'Bearer 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',
     'Content-Type': 'application/json',
   },
   body: JSON.stringify({
-    model: 'openai/gpt-4o',
-    messages: [
-      {
-        role: 'user',
-        content: prompt,
-      },
-    ],
-  }),
-});
+   prompt: userprompt 
+})
+}
+);
 const data = await reponose.json();
-console.log(data.choices[0].message.content);
+console.log(data.reply);
 const answer = document.querySelector(".answer");
-answer.textContent = data.choices[0].message.content;
-
-
-
+answer.textContent = data.reply;
 }
 
 btn.addEventListener("click",() => {

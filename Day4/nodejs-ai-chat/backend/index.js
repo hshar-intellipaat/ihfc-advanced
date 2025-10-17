@@ -1,7 +1,9 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 
 app.use(express.json());
+app.use(cors({origin:'*'}));
 
 app.post("/",async(req,res)=>{
     console.log(req.body.prompt);
@@ -9,7 +11,7 @@ app.post("/",async(req,res)=>{
         const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
   method: 'POST',
   headers: {
-    Authorization: 'Bearer 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',
+     Authorization: 'Bearer <key>',// change this
     'Content-Type': 'application/json'
   },
   body: JSON.stringify({
